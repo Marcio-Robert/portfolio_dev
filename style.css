@@ -514,23 +514,23 @@ nav.scrolled {
 }
 
 /* Hover effect on the parent card triggers the flow */
-.project-card:hover .abstract-flow .node {
+.project-card:hover .abstract-flow .node, .project-card.glow-active .abstract-flow .node {
   border-color: var(--accent-primary);
   color: var(--text-main);
   box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
 }
 
-.project-card:hover .abstract-flow .node.core {
+.project-card:hover .abstract-flow .node.core, .project-card.glow-active .abstract-flow .node.core {
   box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
   background: rgba(0, 255, 136, 0.15);
   transform: scale(1.1);
 }
 
-.project-card:hover .abstract-flow .flow-line {
+.project-card:hover .abstract-flow .flow-line, .project-card.glow-active .abstract-flow .flow-line {
   background: rgba(0, 255, 136, 0.3);
 }
 
-.project-card:hover .abstract-flow .data-packet {
+.project-card:hover .abstract-flow .data-packet, .project-card.glow-active .abstract-flow .data-packet {
   background: var(--accent-primary);
   box-shadow: 0 0 12px var(--accent-primary);
   animation: data-flow 1.5s infinite linear;

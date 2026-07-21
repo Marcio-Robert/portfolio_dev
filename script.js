@@ -19,7 +19,7 @@ const defaultObserverOptions = {
 
 const mobileCenterOptions = {
     root: null,
-    rootMargin: '-35% 0px -35% 0px', // Aciona quando o elemento chega próximo ao centro
+    rootMargin: '-40% 0px -40% 0px', // Aciona apenas quando o elemento estiver bem no centro
     threshold: 0
 };
 
@@ -47,6 +47,22 @@ document.querySelectorAll('.reveal').forEach(el => {
         observer.observe(el);
     }
 });
+
+const mobileGlowObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('glow-active');
+        } else {
+            entry.target.classList.remove('glow-active');
+        }
+    });
+}, mobileCenterOptions);
+
+if (isMobile) {
+    document.querySelectorAll('.stack-item, .project-card').forEach(el => {
+        mobileGlowObserver.observe(el);
+    });
+}
 
 // Efeito de digitação no Hero Section
 const heroTyping = document.getElementById('hero-typing');
