@@ -19,7 +19,7 @@ const defaultObserverOptions = {
 
 const mobileCenterOptions = {
     root: null,
-    rootMargin: '-40% 0px -40% 0px', // Aciona apenas quando o elemento estiver bem no centro
+    rootMargin: '-20% 0px -30% 0px', // Aciona apenas quando o elemento estiver bem no centro
     threshold: 0
 };
 
